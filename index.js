@@ -7,7 +7,7 @@ const logger = {
 	error: () => {},
 };
 
-const server = new DNSServer('0.0.0.0', SERVER_PORT, logger);
+const server = new DNSServer('0.0.0.0', SERVER_PORT);
 const redis = new RedisClient('127.0.0.1', 6379, logger);
 
 redis.run();

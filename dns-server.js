@@ -18,7 +18,7 @@ class DNSServer {
 		this.port = port;
 		if (logger) this.logger = logger;
 
-		this.forwarder = new DNSForwarder();
+		this.forwarder = new DNSForwarder(logger);
 	}
 
 	run () {

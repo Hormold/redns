@@ -11,6 +11,7 @@ class DNSForwarder {
 		this.host = '8.8.8.8';
 		this.port = 53;
 		this.queue = {};
+		this.logger = logger;
 
 		this.client.on('error', err => {
 			this.logger.log(`[DNS Forwarder] Error: ${err.stack}`);
